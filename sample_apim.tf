@@ -28,6 +28,8 @@ resource "azurerm_api_management" "example" {
       thumbprint_algorithm = "SHA-1"
     }
   }
+
+  
 }
 
 resource "azurerm_subnet" "example" {
