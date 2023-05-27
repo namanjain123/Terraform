@@ -18,7 +18,7 @@ resource "azurerm_api_management" "example" {
   }
 
   virtual_network_configuration {
-    subnet_id = example-subnet
+    subnet_id = "example-subnet"
     private_ip_address_allocation = "Static"  # Set IP allocation to static
     private_ip_address_version    = "IPv4"    # Use IPv4 address version
   }

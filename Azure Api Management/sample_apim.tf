@@ -18,7 +18,7 @@ resource "azurerm_api_management" "example" {
   }
 
   virtual_network_configuration {
-    subnet_id = azurerm_subnet.example.id
+    subnet_id = "naman"
   }
 
   custom_hostname_configuration {
@@ -34,8 +34,8 @@ resource "azurerm_api_management" "example" {
 
 resource "azurerm_subnet" "example" {
   name                 = "example-subnet"
-  resource_group_name  = resourcegroup
-  virtual_network_name = myTFVnet
+  resource_group_name  = "resourcegroup"
+  virtual_network_name = "myTFVnet"
   address_prefixes     = ["10.0.1.0/24"]
 }
 

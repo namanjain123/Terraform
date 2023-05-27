@@ -18,7 +18,7 @@ resource "azurerm_api_management" "example" {
   }
 
   virtual_network_configuration {
-    subnet_id = azurerm_subnet.example.id
+    subnet_id = "naman"
   }
 
   custom_hostname_configuration {
@@ -31,9 +31,9 @@ resource "azurerm_api_management" "example" {
 
   resource "azurerm_api_management_api_operation" "example" {
   operation_id        = "test1"
-  api_name            = example-apim-api
-  api_management_name = example-apim
-  resource_group_name = example-resource-group
+  api_name            = "example-apim-api"
+  api_management_name = "example-apim"
+  resource_group_name = "example-resource-group"
   display_name        = "GET Resource"
   method              = "GET"
   url_template        = "/resource"
@@ -41,9 +41,9 @@ resource "azurerm_api_management" "example" {
 
 resource "azurerm_api_management_api_operation_policy" "example" {
   operation_id        = "test1"
-  api_name            = example-apim-api
-  api_management_name = example-apim
-  resource_group_name = example-resource-group
+  api_name            = "example-apim-api"
+  api_management_name = "example-apim"
+  resource_group_name = "example-resource-group"
 
   xml_content = <<XML
 <policies>
@@ -61,8 +61,8 @@ XML
 
 resource "azurerm_subnet" "example" {
   name                 = "example-subnet"
-  resource_group_name  = resourcegroup
-  virtual_network_name = myTFVnet
+  resource_group_name  = "resourcegroup"
+  virtual_network_name = "myTFVnet"
   address_prefixes     = ["10.0.1.0/24"]
 }
 

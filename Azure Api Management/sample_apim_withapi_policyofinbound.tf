@@ -6,9 +6,9 @@ data "azurerm_api_management_api" "example" {
 }
 
 resource "azurerm_api_management_api_policy" "example" {
-  api_name            = naman
-  api_management_name = example-apim
-  resource_group_name = example-resource-group
+  api_name            = "naman"
+  api_management_name = "example-apim"
+  resource_group_name = "example-resource-group"
 
   xml_content = <<XML
 <policies>

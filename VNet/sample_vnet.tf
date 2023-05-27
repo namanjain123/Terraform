@@ -3,5 +3,5 @@ resource "azurerm_virtual_network" "vnet" {
   name                = "myTFVnet"
   address_space       = ["10.0.0.0/16"]
   location            = "westus2"
-  resource_group_name = resourcegroup
+  resource_group_name = "resourcegroup"
 }
